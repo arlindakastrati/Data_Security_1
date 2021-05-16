@@ -21,7 +21,6 @@ namespace BeaufortCipher
             this.hapesiraperplaintext = new System.Windows.Forms.TextBox();
             this.hapesirapercelestext = new System.Windows.Forms.TextBox();
             this.hapesiraperciphertext = new System.Windows.Forms.TextBox();
-            this.label0 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();  
@@ -55,21 +54,10 @@ namespace BeaufortCipher
             this.hapesiraperciphertext.Size = new System.Drawing.Size(309, 40);
             this.hapesiraperciphertext.TabIndex = 6;
             this.hapesiraperciphertext.TextChanged += new System.EventHandler(this.hapesiraperciphertext_ngjyra);
-           
-            // Label e fontit te tekstit-Label0  
-            this.label0.AutoSize = true;
-            this.label0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label0.Location = new System.Drawing.Point(-117, 440);
-            this.label0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label0.Name = "label0";
-            this.label0.Size = new System.Drawing.Size(17, 17);
-            this.label0.TabIndex = 442;
-            this.label0.Text = "S";
-            this.label0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
+          
             // Label e Plaintext-Label1  
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(8, 13);
             this.label1.TabIndex = 443;
@@ -134,7 +122,6 @@ namespace BeaufortCipher
             this.Controls.Add(this.hapesiraperplaintext);
             this.Controls.Add(this.hapesirapercelestext);
             this.Controls.Add(this.hapesiraperciphertext);
-            this.Controls.Add(this.label0);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -152,7 +139,6 @@ namespace BeaufortCipher
         private System.Windows.Forms.TextBox hapesiraperplaintext;
         private System.Windows.Forms.TextBox hapesirapercelestext;
         private System.Windows.Forms.TextBox hapesiraperciphertext;
-        private System.Windows.Forms.Label label0;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
