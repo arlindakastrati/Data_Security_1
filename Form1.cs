@@ -60,7 +60,7 @@ namespace BeaufortCipher{
         }
         //Background color per plaintext
         private void hapesiraperplaintext_ngjyra(object sender, EventArgs e) {
-            hapesiraperplaintextt.BackColor = System.Drawing.Color.Moccasin;
+            hapesiraperplaintext.BackColor = System.Drawing.Color.Moccasin;
             hapesirapercelestext.BackColor = System.Drawing.Color.White;
             hapesiraperciphertext.BackColor = System.Drawing.Color.White;   
         }
