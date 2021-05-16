@@ -36,7 +36,7 @@ namespace BeaufortCipher
             this.hapesiraperplaintext.Multiline = true;
             this.hapesiraperplaintext.Name = "hapesiraperplaintextt";
             this.hapesiraperplaintext.Size = new System.Drawing.Size(309, 40);
-            this.hapesiraperplaintext.TabIndex = 2;
+            this.hapesiraperplaintext.TabIndex = 1;
             this.hapesiraperplaintext.TextChanged += new System.EventHandler(this.hapesiraperplaintext_ngjyra);
          
             // Hapesira e tekstit per celes
@@ -44,7 +44,7 @@ namespace BeaufortCipher
             this.hapesirapercelestext.Multiline = true;
             this.hapesirapercelestext.Name = "hapesirapercelestext";
             this.hapesirapercelestext.Size = new System.Drawing.Size(309, 40);
-            this.hapesirapercelestext.TabIndex = 3;
+            this.hapesirapercelestext.TabIndex = 2;
             this.hapesirapercelestext.TextChanged += new System.EventHandler(this.hapesirapercelestext_ngjyra);
             
             // Hapesira e tekstit per ciphertext
@@ -52,7 +52,7 @@ namespace BeaufortCipher
             this.hapesiraperciphertext.Multiline = true;
             this.hapesiraperciphertext.Name = "hapesiraperciphertext";
             this.hapesiraperciphertext.Size = new System.Drawing.Size(309, 40);
-            this.hapesiraperciphertext.TabIndex = 6;
+            this.hapesiraperciphertext.TabIndex = 3;
             this.hapesiraperciphertext.TextChanged += new System.EventHandler(this.hapesiraperciphertext_ngjyra);
           
             // Label e Plaintext-Label1  
@@ -60,7 +60,7 @@ namespace BeaufortCipher
             this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(8, 13);
-            this.label1.TabIndex = 443;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Plaintext:";
              
             // Label e Çelesi-Label2 
@@ -68,7 +68,7 @@ namespace BeaufortCipher
             this.label2.Location = new System.Drawing.Point(12, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 13);
-            this.label2.TabIndex = 444;
+            this.label2.TabIndex = 11;
             this.label2.Text = "Çelesi:";
 
             // Label e Ciphertext-Label3
@@ -76,14 +76,14 @@ namespace BeaufortCipher
             this.label3.Location = new System.Drawing.Point(12, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
-            this.label3.TabIndex = 445;
+            this.label3.TabIndex = 12;
             this.label3.Text = "Ciphertext:";
             
             // Butoni i enkriptimit
             this.butonienkriptimit.Location = new System.Drawing.Point(12, 250);
             this.butonienkriptimit.Name = "butonienkriptimit";
             this.butonienkriptimit.Size = new System.Drawing.Size(151, 38);
-            this.butonienkriptimit.TabIndex = 5;
+            this.butonienkriptimit.TabIndex =20;
             this.butonienkriptimit.Text = "Enkriptimi";
             this.butonienkriptimit.UseVisualStyleBackColor = true;
             this.butonienkriptimit.Click += new System.EventHandler(this.butonienkriptimit_);
@@ -92,7 +92,7 @@ namespace BeaufortCipher
             this.butonidekriptimit.Location = new System.Drawing.Point(170, 250);
             this.butonidekriptimit.Name = "butonidekriptimit";
             this.butonidekriptimit.Size = new System.Drawing.Size(151, 38);
-            this.butonidekriptimit.TabIndex = 1;
+            this.butonidekriptimit.TabIndex = 21;
             this.butonidekriptimit.Text = "Dekriptimi";
             this.butonidekriptimit.UseVisualStyleBackColor = true;
             this.butonidekriptimit.Click += new System.EventHandler(this.butonidekriptimit_);
@@ -101,7 +101,7 @@ namespace BeaufortCipher
             this.butonifshirjes.Location = new System.Drawing.Point(12, 294);
             this.butonifshirjes.Name = "butonifshirjes";
             this.butonifshirjes.Size = new System.Drawing.Size(151, 38);
-            this.butonifshirjes.TabIndex = 454;
+            this.butonifshirjes.TabIndex = 22;
             this.butonifshirjes.Text = "Fshij";
             this.butonifshirjes.UseVisualStyleBackColor = true;
             this.butonifshirjes.Click += new System.EventHandler(this.butonifshirjes_);
@@ -110,7 +110,7 @@ namespace BeaufortCipher
             this.butoniinformatave.Location = new System.Drawing.Point(170, 294);
             this.butoniinformatave.Name = "butoniinformatave";
             this.butoniinformatave.Size = new System.Drawing.Size(151, 38);
-            this.butoniinformatave.TabIndex = 455;
+            this.butoniinformatave.TabIndex = 23;
             this.butoniinformatave.Text = "Info";
             this.butoniinformatave.UseVisualStyleBackColor = true;
             this.butoniinformatave.Click += new System.EventHandler(this.butoniinformatave_);
