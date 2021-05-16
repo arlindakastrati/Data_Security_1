@@ -13,8 +13,8 @@ namespace BeaufortCipher
         //Dritarja e udhezimeve-informatave
         public void shfaqdritaren_informatave(){
             String infoText = "Beaufort Cipher e krijuar nga Francis Beaufort është një shifrim zëvendësimi e ngjashme me Vigenere"+
-                " Cipher por me një mekanizem më të modifikuar.Është një sistem kriptografik përmes të cilit mund të bëhet enkriptimi dhe dekriptimi i karaktereve ose teksti.\n\n"+
-                "Për shembull, nëse donit te enkriptoni karakterin e nje teksti të thjeshtë 'e' me celesin 'l', hapat do të ishin:\n"+
+                " Cipher por me një mekanizem më të modifikuar. Është një sistem kriptografik përmes të cilit mund të bëhet enkriptimi dhe dekriptimi i karaktereve ose teksti.\n\n"+
+                "Për shembull, nëse donit të enkriptoni karakterin e një teksti të thjeshtë 'e' me celesin 'l', hapat do të ishin:\n"+
                 "1.Gjeni kolonën me karakterin 'e' në krye,\n"+
                 "2.Vazhdoni poshtë nëpër atë kolonë për të gjetur çelësin 'l',\n"+
                 "3.Vazhdoni në skajin e majtë të tabeles për të gjetur shkronjën e tekstit të koduar ('H' në këtë rast).\n\n"+
