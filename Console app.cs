@@ -20,12 +20,7 @@ namespace ConsoleApp
 
             for (int i = 0; i < keyword.Length; i++)
                 letters.Replace(keyword[i].ToString(), "");
-
-
-
-
-
-            int k = 0;
+                int k = 0;
             for (int i = 0; i < 4; i++)
                 for (int j = 0; j < 4; j++)
                 {
