@@ -13,7 +13,7 @@ namespace BeaufortCipher
             base.Dispose(disposing);
         }
 
-        #region Kodi i gjeneruar nga Windows Forms Designer
+        #region 
             
         //Dizajni i jashtem i programmit
         private void KomponentaIncializuese_interfaceit()
