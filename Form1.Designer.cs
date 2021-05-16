@@ -3,6 +3,7 @@ namespace BeaufortCipher
     partial class Form1
     {
         private System.ComponentModel.IContainer components = null;
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -29,12 +30,12 @@ namespace BeaufortCipher
             this.butonifshirjes = new System.Windows.Forms.Button();
             this.butoniinformatave = new System.Windows.Forms.Button();
             this.SuspendLayout();
-          
+        
+
             // Hapesira e tekstit per plaintext
             this.hapesiraperplaintext.Location = new System.Drawing.Point(12, 25);
             this.hapesiraperplaintext.Multiline = true;
-            this.hapesiraperplaintext.Name = "hapesiraperplaintext";
-            this.hapesiraperplaintext.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.hapesiraperplaintext.Name = "hapesiraperplaintextt";
             this.hapesiraperplaintext.Size = new System.Drawing.Size(309, 40);
             this.hapesiraperplaintext.TabIndex = 2;
             this.hapesiraperplaintext.TextChanged += new System.EventHandler(this.hapesiraperplaintext_ngjyra);
@@ -43,7 +44,6 @@ namespace BeaufortCipher
             this.hapesirapercelestext.Location = new System.Drawing.Point(12, 104);
             this.hapesirapercelestext.Multiline = true;
             this.hapesirapercelestext.Name = "hapesirapercelestext";
-            this.hapesirapercelestext.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.hapesirapercelestext.Size = new System.Drawing.Size(309, 40);
             this.hapesirapercelestext.TabIndex = 3;
             this.hapesirapercelestext.TextChanged += new System.EventHandler(this.hapesirapercelestext_ngjyra);
@@ -52,7 +52,6 @@ namespace BeaufortCipher
             this.hapesiraperciphertext.Location = new System.Drawing.Point(12, 183);
             this.hapesiraperciphertext.Multiline = true;
             this.hapesiraperciphertext.Name = "hapesiraperciphertext";
-            this.hapesiraperciphertext.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.hapesiraperciphertext.Size = new System.Drawing.Size(309, 40);
             this.hapesiraperciphertext.TabIndex = 6;
             this.hapesiraperciphertext.TextChanged += new System.EventHandler(this.hapesiraperciphertext_ngjyra);
