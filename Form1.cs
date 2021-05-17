@@ -117,7 +117,7 @@ namespace BeaufortCipher{
             hapesiraperplaintext.Text = "";
             hapesirapercelestext.Text = "";
             hapesiraperciphertext.Text = "";
-            AlgoritmiCipher.unmarkAll();
+            
         }
         
         //Butoni i informatave
