@@ -33,8 +33,6 @@ namespace BeaufortCipher
         }
 
      
-        public void unmarkAll(){            
-        }
        
 
       
