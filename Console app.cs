@@ -11,6 +11,39 @@ namespace ConsoleApp7
         //static void Main(string[] args)
         public static void Main()
         {
+            Console.WriteLine("BeaufortCipher");
+            Console.WriteLine();
+
+
+            Console.WriteLine("Plaintext: ");
+            string plaintext = Console.ReadLine();
+            Console.WriteLine();
+
+            List<char> alfabeti =
+                Enumerable.Range('a', 'z' - 'a' + 1)
+                .Select(x => (char)x).ToList();
+
+            char[][] karakteret = new char['z' - 'a' + 1][];
+            for (int i = 0; i < karakteret.Length; i++)
+            {
+                karakteret[i] = alfabeti.ToArray();
+                var first = alfabeti.First();
+                alfabeti.Remove(first);
+                alfabeti.Insert(alfabeti.Count, first);
+            }
+
+            Console.WriteLine("Celesi:");
+            string keytext = Console.ReadLine();
+
+            Console.WriteLine();
+
+            string cipherText = Enkriptimi(plaintext, karakteret, keytext);
+            Console.WriteLine("Teksti i enkriptuar: {0}", cipherText);
+
+            string decipherText = Dekriptimi(cipherText, karakteret, keytext);
+            Console.WriteLine("Teksti i dekriptuar: {0}", decipherText);
+
+            Console.ReadKey();
            
         }
 
@@ -71,6 +104,14 @@ namespace ConsoleApp7
             }
 
             return result;
+        }
+        private static string Dekriptimi(string cipherText, char[][] karakteret, string keytext)
+        {
+            string rez = string.Empty;
+
+            rez = Enkriptimi(cipherText, karakteret, keytext);
+
+            return rez;
         }
     }
 }
