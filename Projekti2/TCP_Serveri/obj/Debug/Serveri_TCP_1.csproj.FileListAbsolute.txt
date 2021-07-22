@@ -1,0 +1,32 @@
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\Serveri_TCP_1.exe.config
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\Serveri_TCP_1.exe
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\Serveri_TCP_1.pdb
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csprojAssemblyReference.cache
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.Form1.resources
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.Properties.Resources.resources
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csproj.GenerateResource.cache
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csproj.CoreCompileInputs.cache
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.exe
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.pdb
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\JWT.dll
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\JWT.pdb
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\JWT.xml
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\STARTECH\source\repos\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csproj.CopyComplete
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\Serveri_TCP_1.exe.config
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\Serveri_TCP_1.exe
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\Serveri_TCP_1.pdb
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\JWT.dll
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\Newtonsoft.Json.dll
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\JWT.pdb
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\JWT.xml
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\bin\Debug\Newtonsoft.Json.xml
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csprojAssemblyReference.cache
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.Form1.resources
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.Properties.Resources.resources
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csproj.GenerateResource.cache
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csproj.CoreCompileInputs.cache
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.csproj.CopyComplete
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.exe
+D:\Semestri II\Siguria e te dhenave\DETYRAE2TEEE\Serveri_TCP_1\obj\Debug\Serveri_TCP_1.pdb
