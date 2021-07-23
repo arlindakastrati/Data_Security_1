@@ -1,0 +1,131 @@
+<users>
+   <user id="1">
+   <name>Arlinda</name>
+   <surname>Kastrati</surname>
+   <username>Linda</username>
+   <password>
+       <salt>264445</salt>
+       <saltedHash>SKfdhjJhgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e ujit</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>223</valueineuros>
+    <valueindollar>2444</valueindollar>
+   </user>
+   <user id="2">
+   <name>Alberiana</name>
+   <surname>Tofaj</surname>
+   <username>Ana</username>
+   <password>
+       <salt>265325</salt>
+       <saltedHash>BGJhgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e rrymes</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user>
+   <user id="3">
+   <name>Lily</name>
+   <surname>Smith </surname>
+   <username>Li</username>
+   <password>
+       <salt>874325</salt>
+       <saltedHash>BGJhgjjgsTU5DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>waste bill</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user>
+   <user id="4">
+   <name>Alberiana</name>
+   <surname>Tofaj</surname>
+   <username>Ana</username>
+   <password>
+       <salt>265325</salt>
+       <saltedHash>BGJhgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e rrymes</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user>
+   <user id="4">
+   <name>Arlinda</name>
+   <surname>Kastrati</surname>
+   <username>Ari</username>
+   <password>
+       <salt>2333</salt>
+       <saltedHash>asdfgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e rrymes</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user>
+
+   <user id="5">
+   <name>Alberiana</name>
+   <surname>Tofaj</surname>
+   <username>Jana</username>
+   <password>
+       <salt>9975325</salt>
+       <saltedHash>pdohgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e rrymes</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user>
+
+    <user id="6">
+   <name>Alberiana</name>
+   <surname>Tofaj</surname>
+   <username>Jana</username>
+   <password>
+       <salt>9975325</salt>
+       <saltedHash>pdohgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e rrymes</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user> 
+   
+   <user id="7">
+   <name>Alberiana</name>
+   <surname>Tofaj</surname>
+   <username>Jana</username>
+   <password>
+       <salt>9975325</salt>
+       <saltedHash>pdohgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e rrymes</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user>
+    <user id="8">
+   <name>Alberiana</name>
+   <surname>Tofaj</surname>
+   <username>Jana</username>
+   <password>
+       <salt>9975325</salt>
+       <saltedHash>pdohgjFTJB245DdgjGjg?/=</saltedHash>
+    </password>
+    <invoicetype>Fature e rrymes</invoicetype>
+    <year>2021</year>
+    <month>07<month>
+    <valueineuros>2233</valueineuros>
+    <valueindollar>44444</valueindollar>
+   </user>
+</users>
