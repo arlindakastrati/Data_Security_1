@@ -23,6 +23,7 @@ namespace Serveri_TCP_1
 {
     public partial class Form1 : Form
     {
+
         X509Certificate2 certifikata;
         RSACryptoServiceProvider objRsa = new RSACryptoServiceProvider();
         DESCryptoServiceProvider objDes = new DESCryptoServiceProvider();
@@ -30,33 +31,56 @@ namespace Serveri_TCP_1
         string iv;
         Socket serverSocket;
         Socket accept;
-
-
-
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
 
+            X509Store certificateStore = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+            certificateStore.Open(OpenFlags.OpenExistingOnly);
+
+            try
+            {
+                X509Certificate2Collection certCollection = X509Certificate2UI.SelectFromCollection(certificateStore.Certificates,
+                    "Zgjedh certifikaten", "Zgjedh certifikaten", X509SelectionFlag.SingleSelection);
+
+                certifikata = certCollection[0];
+                if (certifikata.HasPrivateKey)
+                {
+                    MessageBox.Show("Keni perzgjedhur certifikaten e " +
+                        certifikata.Subject);
+                }
+                else
+                {
+                    MessageBox.Show("Certifikata nuk permbane celes privat!");
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            byte[] byteCert = certifikata.Export(X509ContentType.Cert, "Alberiana");
+            accept.Send(byteCert, 0, byteCert.Length, 0);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             int porti = 7000;
-            serverSocket = socket();
-            serverSocket.Bind(new IPEndPoint(IPAddress.Any,porti ));
+            Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint endpoint = new IPEndPoint(IPAddress.Any, porti);
+            server.Bind(endpoint);
 
-
-            serverSocket.Listen(10);
+            server.Listen(10);
             Console.WriteLine("Duke pritur klientin në portin " + porti);
 
             new Thread(() =>
             {
-                accept = serverSocket.Accept();
-                serverSocket.Close();
+                accept = server.Accept();
+                server.Close();
 
                 while (true)
                 {
@@ -83,25 +107,26 @@ namespace Serveri_TCP_1
 
                         if (controlFlow == "1")
                         {
-                            if (Users.isUser(list[0], list[1]))
+                            if (Users.isUser(list[0]))
                             {
-                                XElement user = Users.getUserInfo(list[0]);
+                                XElement user = Users.getUserInfo(list[0], list[1]);
                                 string thisName = user.Element("name").Value.ToString();
                                 string thisSurName = user.Element("surname").Value.ToString();
                                 string thisInvoiceType = user.Element("invoicetypee").Value.ToString();
                                 string thisYear = user.Element("year").Value.ToString();
                                 string thisMonth = user.Element("month").Value.ToString();
-                                string thisValueineuros= user.Element("valueineuros").Value.ToString();
+                                string thisValueineuros = user.Element("valueineuros").Value.ToString();
                                 string thisValueinDollar = user.Element("valueindollars").Value.ToString();
+
                                 var payload = new Dictionary<string, object>
                                 {
                                 { "name", thisName },
-                                    { "surname", thisSurName },
-                                    { "invoicetype", thisInvoiceType },
-                                    { "year", thisYear },
-                                    { "month", thisMonth },
-                                    { "valueineuros", thisValueineuros},
-                                    { "valueindollars", thisValueinDollar },
+                                { "surname", thisSurName },
+                                { "invoicetype", thisInvoiceType },
+                                { "year", thisYear },
+                                { "month", thisMonth },
+                                { "valueineuros", thisValueineuros},
+                                { "valueindollars", thisValueinDollar },
                                 };
 
                                 IJwtAlgorithm algorithm = new HMACSHA256Algorithm();
@@ -124,13 +149,13 @@ namespace Serveri_TCP_1
                         }
                         else if (Int32.Parse(list[list.Length - 1]) == 2)
                         {
-                            Users.insert(list[0], list[1], list[2], list[3], list[4], list[5], list[6],list[7],list[8]);
+                            Users.insert(list[0], list[1], list[2], list[3], list[4], list[5], list[6], list[7], list[8]);
                         }
 
 
                         Invoke((MethodInvoker)delegate
                         {
-                           // listBox1.Items.Add(accept.RemoteEndPoint);
+                            //listBox1.Items.Add(accept.RemoteEndPoint);
                         });
                     }
                     catch
@@ -187,39 +212,10 @@ namespace Serveri_TCP_1
             string decryptedText = Encoding.UTF8.GetString(byteTextiDekriptuar);
             return decryptedText;
         }
-        private void button2_Click(object sender, EventArgs e)
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            X509Store certificateStore = new X509Store(StoreName.My, StoreLocation.CurrentUser);
-            certificateStore.Open(OpenFlags.OpenExistingOnly);
-
-            try
-            {
-                X509Certificate2Collection certCollection = X509Certificate2UI.SelectFromCollection(certificateStore.Certificates,
-                    "Zgjedh certifikaten", "Zgjedh certifikaten", X509SelectionFlag.SingleSelection);
-
-                certifikata = certCollection[0];
-                if (certifikata.HasPrivateKey)
-                {
-                    MessageBox.Show("Keni perzgjedhur certifikaten e " +
-                        certifikata.Subject);
-                }
-                else
-                {
-                    MessageBox.Show("Certifikata nuk permbane celes privat!");
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-
-            byte[] byteCert = certifikata.Export(X509ContentType.Cert, "Alberiana");
-            accept.Send(byteCert, 0, byteCert.Length, 0);
 
         }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        { }
-
-        
     }
 }
