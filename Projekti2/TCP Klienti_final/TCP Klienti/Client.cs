@@ -71,6 +71,7 @@ namespace TCP_Klienti
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             //send();
+            new Login(clientSocket,certifikata).Show();
         }
         private void btnConnect_Click(object sender, EventArgs e)
         {
@@ -88,14 +89,13 @@ namespace TCP_Klienti
                 {
                     server.Connect(ipep);
 
-                    txtMesazhi.AppendText("Jeni të lidhur me serverin:" + txtIP.Text + " dhe Portin: " + txtPorti.Text + "\n");
+                    txtMesazhi.AppendText("You are connected with Server:" + txtIP.Text + " and Port: " + txtPorti.Text + "\n");
                     
                     txtMesazhi.AppendText("\n\n" + ReceiveDataFromServer());
-                    
                 }
                 catch (SocketException ex)
                 {
-                    txtMesazhi.AppendText("E pamundur që të lidheni me server. Ju lutem kontrolloni IP adresen dhe portin!");
+                    txtMesazhi.AppendText("It is impossible to connect with Server.Please check your IP Address and Port!");
                     txtMesazhi.AppendText("\n" + ex.ToString());
                     
                     return;
