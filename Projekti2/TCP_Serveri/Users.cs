@@ -182,11 +182,11 @@ namespace Serveri_TCP_1
             try
             {
                 XElement users = XElement.Load($"{usersFilepath}");
-                IEnumerable<XElement> infoPuntoret = from user in users.Descendants("user")
+                IEnumerable<XElement> infoUserat = from user in users.Descendants("user")
                                                      where user.Element("username").Value.ToString().Equals(username)
                                                      select user;
 
-                return infoPuntoret.First();
+                return infoUserat.First();
             }
             catch
             {
