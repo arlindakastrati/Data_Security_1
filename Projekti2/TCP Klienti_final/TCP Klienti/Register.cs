@@ -19,8 +19,8 @@ namespace TCP_Klienti
     public partial class Register : Form
     {
         X509Certificate2 certifikata;
-        RSACryptoServiceProvider objRsa = new RSACryptoServiceProvider();
-        DESCryptoServiceProvider objDes = new DESCryptoServiceProvider();
+        RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+        DESCryptoServiceProvider des = new DESCryptoServiceProvider();
         Socket clientSocket;
 
         public Register(Socket socket, X509Certificate2 certificate2)
@@ -36,11 +36,13 @@ namespace TCP_Klienti
         {
 
         }
-
+        
         private void BtnSignUp_Click(object sender, EventArgs e)
         {
-            send();
-            MessageBox.Show("Te dhenat u ruajten me sukses");
+            
+
+            MessageBox.Show("Your information have been saved. Go to Login!");
+            this.Close();
         }
         private void send()
         {
@@ -54,41 +56,45 @@ namespace TCP_Klienti
             string month = txtMuaji.Text;
             string valueineuros = txtEuro.Text;
             string valueindollars = txtDollar.Text;
-            string register = "2";
 
-            string msg = name + "." + surname + "." + username + "." + password + "." + invoicetypee + "." + year + "." + email + "." + month + "." + valueineuros + "." + valueindollars + "." + register;
-            msg = encrypt(msg);
+            string msg = name + "." + surname + "." + username + "." + password + "." + invoicetypee + "." + year + "." + email + "." + month + "." + valueineuros + "." + valueindollars ;
+            msg = DESEncrypt(msg);
             byte[] data = Encoding.Default.GetBytes(msg);
             clientSocket.Send(data, 0, data.Length, 0);
 
         }
 
-        private string encrypt(string plaintext)
+        string DESEncrypt(string data)
         {
-            objDes.GenerateKey();
-            objDes.GenerateIV();
-            objDes.Padding = PaddingMode.Zeros;
-            objDes.Mode = CipherMode.CBC;
-            string key = Encoding.Default.GetString(objDes.Key);
-            string IV = Encoding.Default.GetString(objDes.IV);
+            des.GenerateKey();
+            des.GenerateIV();
+            des.Padding = PaddingMode.Zeros;
+            des.Mode = CipherMode.CBC;
+            string key = Encoding.Default.GetString(des.Key);
+            string IV = Encoding.Default.GetString(des.IV);
 
 
-            objRsa = (RSACryptoServiceProvider)certifikata.PublicKey.Key;
-            byte[] byteKey = objRsa.Encrypt(objDes.Key, true);
+            ///??????
+            rsa = (RSACryptoServiceProvider)certifikata.PublicKey.Key;
+            //?????????
+            
+            
+            byte[] byteKey = rsa.Encrypt(des.Key, true);
             string encryptedKey = Convert.ToBase64String(byteKey);
 
-            byte[] bytePlaintexti = Encoding.UTF8.GetBytes(plaintext);
+            byte[] bytePlaintexti = Encoding.ASCII.GetBytes(data);
 
 
             MemoryStream ms = new MemoryStream();
-            CryptoStream cs = new CryptoStream(ms, objDes.CreateEncryptor(), CryptoStreamMode.Write);
+            CryptoStream cs = new CryptoStream(ms, des.CreateEncryptor(), CryptoStreamMode.Write);
             cs.Write(bytePlaintexti, 0, bytePlaintexti.Length);
             cs.Close();
 
             byte[] byteCiphertexti = ms.ToArray();
 
-            return IV + "." + encryptedKey + "." + Convert.ToBase64String(byteCiphertexti);
+            return IV + "*" + encryptedKey + "*" + Convert.ToBase64String(byteCiphertexti);
 
         }
     }
 }
+
