@@ -70,7 +70,7 @@
                 this.txtPorti.Name = "txtPorti";
                 this.txtPorti.Size = new System.Drawing.Size(45, 20);
                 this.txtPorti.TabIndex = 26;
-                this.txtPorti.Text = "7000";
+                this.txtPorti.Text = "9000";
                 // 
                 // txtMesazhi per pergjigjen e Serverit
                 // 
@@ -174,7 +174,7 @@
                 this.label6.Size = new System.Drawing.Size(193, 13);
                 this.label6.TabIndex = 6;
                 this.label6.Text = "Don\'t have an account ? Sign up now !";
-                this.label6.Click += new System.EventHandler(this.Label6_Click);
+                this.label6.Click += new System.EventHandler(this.Siggnup_Click);
                 // 
                 // label2 per tekstin Pergjigjja nga Serveri
                 // 

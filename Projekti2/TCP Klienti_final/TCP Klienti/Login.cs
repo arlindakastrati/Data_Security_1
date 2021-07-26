@@ -19,8 +19,8 @@ namespace TCP_Klienti
     public partial class Login : Form
     {
         X509Certificate2 certifikata;
-        RSACryptoServiceProvider objRsa = new RSACryptoServiceProvider();
-        DESCryptoServiceProvider objDes = new DESCryptoServiceProvider();
+        private static RSACryptoServiceProvider rsaServer = new RSACryptoServiceProvider();
+        //DESCryptoServiceProvider objDes = new DESCryptoServiceProvider();
         Socket clientSocket;
 
         public Login(Socket socket, X509Certificate2 certificate2)
@@ -43,36 +43,17 @@ namespace TCP_Klienti
             MessageBox.Show("You have been logout!");
             Application.Exit();
         }
-        private string encrypt(string plaintext)
+       
+         string DESEncrypt(string data)
         {
-            objDes.GenerateKey();
-            objDes.GenerateIV();
-            objDes.Padding = PaddingMode.Zeros;
-            objDes.Mode = CipherMode.CBC;
-            string key = Encoding.Default.GetString(objDes.Key);
-            string IV = Encoding.Default.GetString(objDes.IV);
+            DESCryptoServiceProvider dess = new DESCryptoServiceProvider();
 
+            byte[] EncryptedData = des.EncryptTextToMemory(data, dess.Key, dess.IV);
 
-            ///??????
-            objRsa = (RSACryptoServiceProvider)certifikata.PublicKey.Key;
-            //?????????
-            
-            
-            byte[] byteKey = objRsa.Encrypt(objDes.Key, true);
-            string encryptedKey = Convert.ToBase64String(byteKey);
+            byte[] RSAKey = rsa.RSAEncrypt(dess.Key, rsaServer.ExportParameters(false), false);
 
-            byte[] bytePlaintexti = Encoding.UTF8.GetBytes(plaintext);
-
-
-            MemoryStream ms = new MemoryStream();
-            CryptoStream cs = new CryptoStream(ms, objDes.CreateEncryptor(), CryptoStreamMode.Write);
-            cs.Write(bytePlaintexti, 0, bytePlaintexti.Length);
-            cs.Close();
-
-            byte[] byteCiphertexti = ms.ToArray();
-
-            return IV + "." + encryptedKey + "." + Convert.ToBase64String(byteCiphertexti);
-
+            return Convert.ToBase64String(dess.IV) + "*" + Convert.ToBase64String(RSAKey) + "*" + Convert.ToBase64String(EncryptedData);
         }
     }
 }
+

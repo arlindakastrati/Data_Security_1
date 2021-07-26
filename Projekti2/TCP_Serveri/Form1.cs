@@ -69,13 +69,13 @@ namespace Serveri_TCP_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int porti = 7000;
+            int porti = 9000;
             Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             IPEndPoint endpoint = new IPEndPoint(IPAddress.Any, porti);
             server.Bind(endpoint);
 
             server.Listen(10);
-            Console.WriteLine("Duke pritur klientin në portin " + porti);
+            
 
             new Thread(() =>
             {
